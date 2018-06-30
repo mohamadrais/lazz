@@ -76,6 +76,15 @@ body {
   padding-left: 0px;
   padding-right: 0px;
 }
+.no-padding{
+  padding: 0 !important;
+}
+.ml-1{
+  padding-left: 0.5rem !important;
+}
+.mr-1{
+  padding-right: 0.5rem !important;
+}
 /* PAGE CONTAINER */
 .page-container {
   width: 100%;
@@ -2206,6 +2215,9 @@ input[type=checkbox] {
 .radio.pull-right {
   width: auto;
 }
+.seprator-block{
+  margin-top: 30px;
+}
 .form-control {
   height: 30px;
   font-size: 12px;
@@ -2244,6 +2256,13 @@ input[type=checkbox] {
   color: #FFF;
   text-align: center;
   min-width: 36px;
+}
+.input-group-addon.custom {
+  border-color: #ccc;
+  background-color: #eee;
+}
+.input-group-addon.custom i{
+  color: #323232;
 }
 .input-group-addon,
 .input-group-btn {
@@ -4626,6 +4645,12 @@ background: #FBD022 !important;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   text-decoration: underline;
+}
+.data-img{
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+  margin-bottom: 5px;
 }
 /* eof faq */
 /* message box */
@@ -7201,6 +7226,13 @@ li.ext_zip {
     width: 100%;
   }
 }
+@media (max-width: 991px) {
+  .form-horizontal .control-label{
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .page-container .page-sidebar {
     position: relative;
