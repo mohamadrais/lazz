@@ -79,10 +79,10 @@
                     <a href="sales-orders.html">
                         <span class="fa fa-file-text-o"></span> Orders</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="sales-returns.html">
                         <span class="fa fa-undo"></span> Returns</a>
-                </li>
+                </li> -->
 
                 <li class="xn-title">Blog</li>
                 <li>
@@ -106,8 +106,12 @@
 
                 <li class="xn-title">Users</li>
                 <li>
+                    <a href="create-user.html">
+                        <span class="fa fa-plus-circle"></span> Create User</a>
+                </li>
+                <li>
                     <a href="user-agents.html">
-                        <span class="fa fa-user"></span> Agents</a>
+                        <span class="fa fa-user"></span> Agents & Stockist</a>
                 </li>
                 <li>
                     <a href="user-customers.html">
@@ -160,113 +164,76 @@
             </ul>
             <!-- END BREADCRUMB -->
 
-            <!-- START RESPONSIVE TABLES -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-
-                        <div class="panel-heading">
-                            <h3 class="panel-title">All Invoices</h3>
-                        </div>
-
-                        <div class="panel-body panel-body-table">
-
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-actions">
-                                    <thead>
-                                        <tr>
-                                            <th width="150">Sequence Number</th>
-                                            <th width="150">Username</th>
-                                            <th width="150">Accept By</th>
-                                            <th width="100">Date</th>
-                                            <th width="200">Shipping Address</th>
-                                            <th width="100">Mobile Number</th>
-                                            <th width="100">Stage</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr id="trow_1">
-                                            <td class="text-center">1</td>
-                                            <td>
-                                                <strong>rais.sahri@gmail.com</strong>
-                                            </td>
-                                            <td>
-                                                Mohamad Salah
-                                            </td>
-                                            <td>24/09/2014</td>
-                                            <td>Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang</td>
-                                            <td>
-                                                014-519 1194
-                                            </td>
-                                            <td>
-                                                <span class="label label-success">Recieved</span>
-                                            </td>
-                                        </tr>
-
-                                        <tr id="trow_2">
-                                            <td class="text-center">1</td>
-                                            <td>
-                                                <strong>rais.sahri@gmail.com</strong>
-                                            </td>
-                                            <td>
-                                                Mohamad Salah
-                                            </td>
-                                            <td>24/09/2014</td>
-                                            <td>Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang</td>
-                                            <td>
-                                                014-519 1194
-                                            </td>
-                                            <td>
-                                                <span class="label label-danger">Pending</span>
-                                            </td>
-                                        </tr>
-
-                                        <tr id="trow_3">
-                                            <td class="text-center">1</td>
-                                            <td>
-                                                <strong>rais.sahri@gmail.com</strong>
-                                            </td>
-                                            <td>
-                                                Mohamad Salah
-                                            </td>
-                                            <td>24/09/2014</td>
-                                            <td>Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang</td>
-                                            <td>
-                                                014-519 1194
-                                            </td>
-                                            <td>
-                                                <span class="label label-success">Recieved</span>
-                                            </td>
-                                        </tr>
-
-                                        <tr id="trow_4">
-                                            <td class="text-center">1</td>
-                                            <td>
-                                                <strong>rais.sahri@gmail.com</strong>
-                                            </td>
-                                            <td>
-                                                Mohamad Salah
-                                            </td>
-                                            <td>24/09/2014</td>
-                                            <td>Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang</td>
-                                            <td>
-                                                014-519 1194
-                                            </td>
-                                            <td>
-                                                <span class="label label-success">Recieved</span>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                    </div>
-
+            <!-- START DEFAULT DATATABLE -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Default</h3>
+                    <ul class="panel-controls">
+                        <li>
+                            <a href="#" class="panel-collapse">
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="panel-refresh">
+                                <span class="fa fa-refresh"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="panel-remove">
+                                <span class="fa fa-times"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <table class="table datatable">
+                        <thead>
+                            <tr>
+                                <th>Sequence Number</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Date</th>
+                                <th>Shipping Address</th>
+                                <th>Reciever Name</th>
+                                <th>Product</th>
+                                <th>Minimal Order</th>
+                                <th>Stage</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamad Salah</td>
+                                <td>user@gmail.com</td>
+                                <td>017 993 1405</td>
+                                <td>2018/04/25</td>
+                                <td>Srinor Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang</td>
+                                <td>Siti Khadijah</td>
+                                <td>LazzCafe (x3)
+                                    <br>LazzChoco (x2)</td>
+                                <td>5</td>
+                                <td>
+                                    <span class="label label-success label-form">Done</span>
+                                    <td>
+                                        <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                            <span class="fa fa-pencil"></span>
+                                        </button>
+                                        <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip" title="Deactive">
+                                            <span class="fa fa-ban"></span>
+                                        </button>
+                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                            <span class="fa fa-times"></span>
+                                        </button>
+                                    </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <!-- END RESPONSIVE TABLES -->
+            <!-- END DEFAULT DATATABLE -->
 
         </div>
         <!-- END PAGE CONTENT WRAPPER -->
@@ -330,6 +297,7 @@
     <script type='text/javascript' src='js/plugins/noty/layouts/topCenter.js'></script>
     <script type='text/javascript' src='js/plugins/noty/layouts/topLeft.js'></script>
     <script type='text/javascript' src='js/plugins/noty/layouts/topRight.js'></script>
+    <script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>
 
     <script type='text/javascript' src='js/plugins/noty/themes/default.js'></script>
     <!-- END PAGE PLUGINS -->

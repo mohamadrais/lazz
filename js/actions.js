@@ -419,6 +419,12 @@ function panel_remove(panel,action,callback){
 }
 /* EOF PANEL FUNCTIONS */
 
+/* TOOLTIPS */
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+/* END TOOLTIPS */
+
 /* X-NAVIGATION CONTROL FUNCTIONS */
 function x_navigation_onresize(){    
     

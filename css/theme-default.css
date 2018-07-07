@@ -2074,6 +2074,19 @@ ul.panel-controls > li > .dropdown-menu:before {
   background: #6ccaea;
   border-color: #63c7e9;
 }
+.btn-outline{
+  border: 1px solid #03497F;
+  color: #03497F;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  margin-right: 25px;
+  padding: 3px 10px;
+}
+.btn-outline:hover{
+  background-color: #03497F;
+  border-color: #03497F;
+  color: #fff;
+}
 .btn-link {
   font-weight: 600;
   color: #1b1e24;
@@ -2316,6 +2329,10 @@ input[type=checkbox] {
 }
 .has-feedback label~.form-control-feedback {
   top: 20px;
+}
+.o-o-switch{
+  font-size: 1rem;
+  color: #999;
 }
 /* FORM VALIDATION STATES */
 .has-success .help-block,

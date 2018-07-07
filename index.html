@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 </head>
+
 <body class="animsition">
 
 	<!-- Header -->
@@ -101,18 +103,51 @@
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="admin-panel.html" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-					</a>
+					<button href="register.html" class="btn btn-xs btn-reg">Register</button>
+					<div href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-login-dropdown" alt="ICON">
+						<div class="header-cart login-dropdown">
+							<span class="s-text19">
+								Email
+							</span>
+							<div class="bo4 of-hidden size15 m-b-20">
+								<input class="sizefull s-text7 p-l-22 p-r-22" type="email" name="email" placeholder="user@email.com">
+							</div>
+
+							<span class="s-text19">
+								Password
+							</span>
+							<div class="bo4 of-hidden size15">
+								<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="password" placeholder="Enter password">
+							</div>
+							<p href="#" align="right" class="m-b-20">
+								<u>Forgot Password?</u>
+							</p>
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="register.html" class="flex-c-m size1 btn-outline bo-rad-20 hov1 s-text1 trans-0-4">
+										Rgister
+									</a>
+								</div>
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Login
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-cart-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
+						<div class="header-cart cart-dropdown">
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
@@ -199,18 +234,50 @@
 			<div class="btn-show-menu">
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-					</a>
+					<div href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-login-dropdown" alt="ICON">
+						<div class="header-cart login-dropdown">
+							<span class="s-text19">
+								Email
+							</span>
+							<div class="bo4 of-hidden size15 m-b-20">
+								<input class="sizefull s-text7 p-l-22 p-r-22" type="email" name="email" placeholder="user@email.com">
+							</div>
+
+							<span class="s-text19">
+								Password
+							</span>
+							<div class="bo4 of-hidden size15">
+								<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="password" placeholder="Enter password">
+							</div>
+							<p href="#" align="right" class="m-b-20">
+								<u>Forgot Password?</u>
+							</p>
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="register.html" class="flex-c-m size1 btn-outline bo-rad-20 hov1 s-text1 trans-0-4">
+										Rgister
+									</a>
+								</div>
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Login
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-cart-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
+						<div class="header-cart cart-dropdown">
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
@@ -293,7 +360,7 @@
 		</div>
 
 		<!-- Menu Mobile -->
-		<div class="wrap-side-menu" >
+		<div class="wrap-side-menu">
 			<nav class="side-menu">
 				<ul class="main-menu">
 					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
@@ -357,98 +424,140 @@
 
 	<!-- Slide1 -->
 	<section class="banner-sec">
-        <div class="container">
-    <div class="row">
-			<div class="col-md-6 top-slider">
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 top-slider">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active">
-							<div class="news-block">
-					<div class="news-media"><img class="img-fluid" src="images/delivery.jpg" alt=""></div>
-					<!--div class="news-title">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="carousel-item active">
+								<div class="news-block">
+									<div class="news-media">
+										<img class="img-fluid" src="images/delivery.jpg" alt="">
+									</div>
+									<!--div class="news-title">
 									<h2 class=" title-large"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a></h2>
 								</div>
 					<div class="news-des">Condimentum ultrices mi est a arcu at cum a elementum per cum turpis dui vulputate vestibulum in vehicula montes vel. Mauris nam suspendisse consectetur mus...</div>
 					<div class="time-text"><strong>2h ago</strong></div-->
-					<div></div>
-				</div>
-						</div>
-			<div class="carousel-item">
-							<div class="news-block">
-					<div class="news-media"><img class="img-fluid" src="images/fbads.jpg" alt=""></div>
-					<!--div class="news-title">
+									<div></div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="news-block">
+									<div class="news-media">
+										<img class="img-fluid" src="images/fbads.jpg" alt="">
+									</div>
+									<!--div class="news-title">
 									<h2 class=" title-large"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a></h2>
 								</div>
 					<div class="news-des">Condimentum ultrices mi est a arcu at cum a elementum per cum turpis dui vulputate vestibulum in vehicula montes vel. Mauris nam suspendisse consectetur mus...</div>
 					<div class="time-text"><strong>2h ago</strong></div-->
-					<div></div>
-				</div>
-						</div>
-			<div class="carousel-item">
-							<div class="news-block">
-					<div class="news-media"><img class="img-fluid" src="images/konsultan.jpg" alt=""></div>
-					<!--div class="news-title">
+									<div></div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="news-block">
+									<div class="news-media">
+										<img class="img-fluid" src="images/konsultan.jpg" alt="">
+									</div>
+									<!--div class="news-title">
 									<h2 class=" title-large"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a></h2>
 								</div>
 					<div class="news-des">Condimentum ultrices mi est a arcu at cum a elementum per cum turpis dui vulputate vestibulum in vehicula montes vel. Mauris nam suspendisse consectetur mus...</div>
 					<div class="time-text"><strong>2h ago</strong></div-->
-					<div></div>
-				</div>
+									<div></div>
+								</div>
+							</div>
 						</div>
-		</div>
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			</ol>
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+					</div>
 				</div>
-</div>
-            <div class="col-md-3">
-        <div class="card"> <img class="img-fluid" src="images/video_1.png" alt="">
-                <div class="card-img-overlay"> <span class="badge badge-pill badge-danger">Video</span> </div>
-                <div class="card-body">
-            <div class="news-title">
-                    <h2 class=" title-small"><a href="#">Iklan Raya 2017 | LAZZ susu kambing - Soalan Maut Hari Raya</a></h2>
-                  </div>
-            <p class="card-text"><small class="text-time"><em>03 February 2018</em></small></p>
-          </div>
-              </div>
-        <div class="card"> <img class="img-fluid" src="images/blog_1.jpg" alt="">
-                <div class="card-img-overlay"> <span class="badge badge-pill badge-danger">Blog</span> </div>
-                <div class="card-body">
-            <div class="news-title">
-                    <h2 class=" title-small"><a href="#">MESTI CUBA- Green Tea Latte Versi Slim dan Kulit Cerah</a></h2>
-                  </div>
-            <p class="card-text"><small class="text-time"><em>14 January 2018</em></small></p>
-          </div>
-              </div>
-      </div>
-            <div class="col-md-3">
-        <div class="card"> <img class="img-fluid" src="images/video_2.png" alt="">
-                <div class="card-img-overlay"> <span class="badge badge-pill badge-danger">Video</span> </div>
-                <div class="card-body">
-            <div class="news-title">
-                    <h2 class=" title-small"><a href="#">LAZZ Susu Kambing pilihan SEKELUARGA</a></h2>
-                  </div>
-            <p class="card-text"><small class="text-time"><em>29 January 2018</em></small></p>
-          </div>
-              </div>
-        <div class="card"> <img class="img-fluid" src="images/blog_2.jpg" alt="">
-                <div class="card-img-overlay"> <span class="badge badge-pill badge-danger">Blog</span> </div>
-                <div class="card-body">
-            <div class="news-title">
-                    <h2 class=" title-small"><a href="#">Rupanya Halba Bukan Sekadar Tambah Susu Badan, Malah Boleh Cantikkan Payudara Juga!</a></h2>
-                  </div>
-            <p class="card-text"><small class="text-time"><em>10 February 2018</em></small></p>
-          </div>
-              </div>
-      </div>
-          </div>
-  </div>
-      </section>
+				<div class="col-md-3">
+					<div class="card">
+						<img class="img-fluid" src="images/video_1.png" alt="">
+						<div class="card-img-overlay">
+							<span class="badge badge-pill badge-danger">Video</span>
+						</div>
+						<div class="card-body">
+							<div class="news-title">
+								<h2 class=" title-small">
+									<a href="#">Iklan Raya 2017 | LAZZ susu kambing - Soalan Maut Hari Raya</a>
+								</h2>
+							</div>
+							<p class="card-text">
+								<small class="text-time">
+									<em>03 February 2018</em>
+								</small>
+							</p>
+						</div>
+					</div>
+					<div class="card">
+						<img class="img-fluid" src="images/blog_1.jpg" alt="">
+						<div class="card-img-overlay">
+							<span class="badge badge-pill badge-danger">Blog</span>
+						</div>
+						<div class="card-body">
+							<div class="news-title">
+								<h2 class=" title-small">
+									<a href="#">MESTI CUBA- Green Tea Latte Versi Slim dan Kulit Cerah</a>
+								</h2>
+							</div>
+							<p class="card-text">
+								<small class="text-time">
+									<em>14 January 2018</em>
+								</small>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card">
+						<img class="img-fluid" src="images/video_2.png" alt="">
+						<div class="card-img-overlay">
+							<span class="badge badge-pill badge-danger">Video</span>
+						</div>
+						<div class="card-body">
+							<div class="news-title">
+								<h2 class=" title-small">
+									<a href="#">LAZZ Susu Kambing pilihan SEKELUARGA</a>
+								</h2>
+							</div>
+							<p class="card-text">
+								<small class="text-time">
+									<em>29 January 2018</em>
+								</small>
+							</p>
+						</div>
+					</div>
+					<div class="card">
+						<img class="img-fluid" src="images/blog_2.jpg" alt="">
+						<div class="card-img-overlay">
+							<span class="badge badge-pill badge-danger">Blog</span>
+						</div>
+						<div class="card-body">
+							<div class="news-title">
+								<h2 class=" title-small">
+									<a href="#">Rupanya Halba Bukan Sekadar Tambah Susu Badan, Malah Boleh Cantikkan Payudara Juga!</a>
+								</h2>
+							</div>
+							<p class="card-text">
+								<small class="text-time">
+									<em>10 February 2018</em>
+								</small>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- New Product -->
 	<section class="newproduct bgwhite p-t-45 p-b-105">
@@ -887,7 +996,8 @@
 							<span class="s-text7">July 18, 2017</span>
 
 							<p class="s-text8 p-t-16">
-								Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit ame
+								Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus,
+								ac fringilla lacus. Ut sit ame
 							</p>
 						</div>
 					</div>
@@ -910,7 +1020,8 @@
 							<span class="s-text7">July 2, 2017</span>
 
 							<p class="s-text8 p-t-16">
-								Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc
+								Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit
+								amet maximus nunc
 							</p>
 						</div>
 					</div>
@@ -940,7 +1051,8 @@
 
 					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
 						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
+							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus,
+							ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
 						</p>
 
 						<span class="s-text9">
@@ -962,7 +1074,8 @@
 
 					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
 						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
+							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus,
+							ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
 						</p>
 
 						<span class="s-text9">
@@ -984,7 +1097,8 @@
 
 					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
 						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
+							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus,
+							ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
 						</p>
 
 						<span class="s-text9">
@@ -1006,7 +1120,8 @@
 
 					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
 						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
+							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus,
+							ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
 						</p>
 
 						<span class="s-text9">
@@ -1028,7 +1143,8 @@
 
 					<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
 						<p class="s-text10 m-b-15 h-size1 of-hidden">
-							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
+							Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus,
+							ac fringilla lacus. Ut sit amet enim orci. Nam eget metus elit.
 						</p>
 
 						<span class="s-text9">
@@ -1111,7 +1227,8 @@
 
 					<div>
 						<p class="s-text7 w-size27">
-							Ada pertanyaan? Premis kami di 334, Jalan Bandar Senawang 16, Pusat Bandar Senawang, 70450 Seremban, Negeri Sembilan atau hubungi kami di 1-800-88-5299
+							Ada pertanyaan? Premis kami di 334, Jalan Bandar Senawang 16, Pusat Bandar Senawang, 70450 Seremban, Negeri Sembilan atau
+							hubungi kami di 1-800-88-5299
 						</p>
 
 						<div class="flex-m p-t-30">
@@ -1252,14 +1369,14 @@
 
 
 
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
 	<script type="text/javascript">
 		$(".selection-1").select2({
@@ -1267,33 +1384,34 @@
 			dropdownParent: $('#dropDownSelect1')
 		});
 	</script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/slick-custom.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript">
-		$('.block2-btn-addcart').each(function(){
+		$('.block2-btn-addcart').each(function () {
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
+			$(this).on('click', function () {
 				swal(nameProduct, "is added to cart !", "success");
 			});
 		});
 
-		$('.block2-btn-addwishlist').each(function(){
+		$('.block2-btn-addwishlist').each(function () {
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
+			$(this).on('click', function () {
 				swal(nameProduct, "is added to wishlist !", "success");
 			});
 		});
 	</script>
 
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
 </body>
+
 </html>

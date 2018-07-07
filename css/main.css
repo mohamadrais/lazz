@@ -846,6 +846,22 @@ li.sale-noti > a {
   transform: scale(1);
 }
 
+.show-cart-dropdown {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.show-login-dropdown {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
 .fixed-header .header-cart {
   top: 160%;
 }
@@ -956,6 +972,25 @@ li.sale-noti > a {
   width: calc((100% - 10px) / 2);
 }
 
+.btn-outline{
+  border: 1px solid #065795;
+  color: #065795;
+  background: transparent;
+}
+
+.btn-reg{
+  background: #FBD022;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  margin-right: 25px;
+  padding: 3px 10px;
+}
+
+.btn-reg:hover{
+  background-color: #dfb920;
+  color: #fff;
+}
 
 
 /*[ Header Mobile ]
