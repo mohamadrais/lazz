@@ -2240,7 +2240,7 @@
 .t-center {text-align: center;}
 .t-left {text-align: left;}
 .t-right {text-align: right;}
-.t-middle {vertical-align: middle;}
+.t-middle {vertical-align: middle !important;}
 
 /* ------------------------------------ */
 .lh-1-0 {line-height: 1.0;}

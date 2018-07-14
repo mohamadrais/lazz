@@ -8,11 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <!-- END META SECTION -->
 
     <!-- CSS INCLUDE -->
-    <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css" />
+    <link rel="stylesheet" type="text/css" id="theme" href="../css/theme-default.css" />     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" id="theme" href="../css/util.css" />
     <!-- EOF CSS INCLUDE -->
 </head>
 
@@ -21,7 +22,7 @@
     <div class="page-container">
 
         <!-- START PAGE SIDEBAR -->
-        <div class="page-sidebar">
+        <div class="page-sidebar page-sidebar-fixed scroll mCustomScrollbar _mCS_1 mCS-autoHide">
             <!-- START X-NAVIGATION -->
             <ul class="x-navigation">
                 <li class="xn-logo">
@@ -30,11 +31,11 @@
                 </li>
                 <li class="xn-profile">
                     <a href="#" class="profile-mini">
-                        <img src="assets/images/users/no-image.jpg" />
+                        <img src="../assets/images/users/no-image.jpg" />
                     </a>
                     <div class="profile">
                         <div class="profile-image">
-                            <img src="assets/images/users/no-image.jpg" />
+                            <img src="../assets/images/users/no-image.jpg" />
                         </div>
                         <div class="profile-data">
                             <div class="profile-data-name">ID Number</div>
@@ -73,6 +74,10 @@
                     <a href="product-list.html">
                         <span class="fa fa-file-text-o"></span> Product List</a>
                 </li>
+                <li>
+                    <a href="product-config.html">
+                        <span class="fa fa-cogs"></span> Product Configuration</a>
+                </li>
                 <li class="xn-title">Sales</li>
                 <li>
                     <a href="sales-orders.html">
@@ -94,19 +99,35 @@
                 </li>
 
                 <li class="xn-title">Invoices</li>
-                <li class="active">
+                <li>
                     <a href="create-invoice.html">
-                        <span class="fa fa-text-width"></span> Create Invoice</a>
+                        <span class="fa fa-file-text"></span> Create Invoice</a>
                 </li>
                 <li>
                     <a href="all-invoices.html">
-                        <span class="fa fa-file-text-o"></span> All Invoices</a>
+                        <span class="fa fa-files-o"></span> All Invoices</a>
                 </li>
 
                 <li class="xn-title">Users</li>
+                <li class="active">
+                    <a href="create-user.html">
+                        <span class="fa fa-plus-circle"></span> Create User</a>
+                </li>
                 <li>
                     <a href="user-agents.html">
                         <span class="fa fa-user"></span> Agents & Stockist</a>
+                </li>
+                <li>
+                    <a href="user-group.html">
+                        <span class="fa fa-user-plus"></span> Grouping Users</a>
+                </li>
+                <li>
+                    <a href="user-price.html">
+                        <span class="fa fa-user"></span> User Price Setting</a>
+                </li>
+                <li>
+                    <a href="user-add-price.html">
+                        <span class="fa fa-usd"></span> New Price Setting</a>
                 </li>
                 <li>
                     <a href="user-customers.html">
@@ -155,14 +176,14 @@
                 <li>
                     <a href="#">Forms Stuff</a>
                 </li>
-                <li class="active">Create Invoice</li>
+                <li class="active">Create User</li>
             </ul>
             <!-- END BREADCRUMB -->
 
             <!-- PAGE TITLE -->
             <div class="page-title">
                 <h2>
-                    <span class="fa fa-arrow-circle-o-left"></span>Create Invoice</h2>
+                    <span class="fa fa-arrow-circle-o-left"></span>Create User</h2>
             </div>
             <!-- END PAGE TITLE -->
 
@@ -173,42 +194,30 @@
                     <div class="col-md-12">
 
                         <div class="block">
-                            <h4>Product Information</h4>
-                            <div class="panel-body">
+                            <h4>Create User</h4>
+                            <div class="panel-body m-b-20">
 
                                 <div class="form-group">
-                                    <label class="col-12 control-label">Sequence Number</label>
+                                    <label class="col-12 control-label">User Type</label>
                                     <div class="col-12">
-                                        <input type="number" class="form-control" placeholder="Enter the sequence number">
+                                        <input type="radio" name="user" value="agent">&emsp;Agent&emsp;&emsp;
+                                        <input type="radio" name="user" value="stockist">&emsp;Stockist&emsp;&emsp;
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-12 control-label">Username</label>
+                                    <label class="col-12 control-label">User Fullame</label>
                                     <div class="col-12">
-                                        <input type="text" class="form-control" placeholder="Enter the username">
+                                        <input type="text" class="form-control" placeholder="Enter the user fullname...">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-12 control-label">Accept By</label>
+                                    <label class="col-12 control-label">User ID</label>
                                     <div class="col-12">
-                                        <input type="text" class="form-control" placeholder="Enter the acceptence name">
+                                        <input type="text" class="form-control" placeholder="User ID will auto generate" readonly>
                                     </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label class="col-12 control-label">Date</label>
-                                    <div class="col-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <span class="fa fa-calendar"></span>
-                                            </span>
-                                            <input type="text" class="form-control datepicker" value="2014-11-01">
-                                        </div>
-                                    </div>
-                                </div>
-
 
                                 <div class="form-group">
                                     <label class="col-12 control-label">Shipping Address</label>
@@ -252,11 +261,11 @@
                                     <div class="row">
                                         <div class="col-12 col-xs-12 col-sm-6 no-padding mr-1">
                                             <label class="col-12 control-label">Mobile Number</label>
-                                            <input type="number" class="form-control" placeholder="Enter receptient mobile number">
+                                            <input type="number" class="form-control" placeholder="Enter user mobile number">
                                         </div>
                                         <div class="col-12 col-xs-12 col-sm-6 no-padding ml-1">
                                             <label class="col-12 control-label">Email</label>
-                                            <input type="text" class="form-control" placeholder="Enter receptient email">
+                                            <input type="text" class="form-control" placeholder="Enter user email">
                                         </div>
                                     </div>
                                 </div>
@@ -264,7 +273,7 @@
 
                             <div class="panel-footer">
                                 <button class="btn btn-default">Clear Form</button>
-                                <button class="btn btn-primary pull-right">Create Invoice</button>
+                                <button class="btn btn-primary pull-right">Create User</button>
                             </div>
                         </div>
                         </form>
@@ -339,59 +348,64 @@
     <!-- END MESSAGE BOX-->
 
     <!-- START PRELOADS -->
-    <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
-    <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+    <audio id="audio-alert" src="../audio/alert.mp3" preload="auto"></audio>
+    <audio id="audio-fail" src="../audio/fail.mp3" preload="auto"></audio>
     <!-- END PRELOADS -->
 
     <!-- START SCRIPTS -->
     <!-- START PLUGINS -->
-    <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap.min.js"></script>
     <!-- END PLUGINS -->
 
     <!-- THIS PAGE PLUGINS -->
-    <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type="text/javascript" src="js/plugins/codemirror/codemirror.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/xml/xml.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/javascript/javascript.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/css/css.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/clike/clike.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/php/php.js"></script>
+    <script type="text/javascript" src="../js/plugins/codemirror/codemirror.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/xml/xml.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/javascript/javascript.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/css/css.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/clike/clike.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/php/php.js"></script>
 
-    <script type="text/javascript" src="js/plugins/summernote/summernote.js"></script>
+    <script type="text/javascript" src="../js/plugins/summernote/summernote.js"></script>
 
-    <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type='text/javascript' src='js/plugins/noty/jquery.noty.js'></script>
-    <script type='text/javascript' src='js/plugins/noty/layouts/topCenter.js'></script>
-    <script type='text/javascript' src='js/plugins/noty/layouts/topLeft.js'></script>
-    <script type='text/javascript' src='js/plugins/noty/layouts/topRight.js'></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-file-input.js"></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-select.js"></script>
+    <script type="text/javascript" src="../js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
 
-    <script type='text/javascript' src='js/plugins/noty/themes/default.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/jquery.noty.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/layouts/topCenter.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/layouts/topLeft.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/layouts/topRight.js'></script>
 
-    <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>
+    <script type='text/javascript' src='../js/plugins/noty/themes/default.js'></script>
     <!-- END PAGE PLUGINS -->
 
 
     <!-- START THIS PAGE PLUGINS-->
-    <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type="text/javascript" src="js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
-    <script type="text/javascript" src="js/plugins/dropzone/dropzone.min.js"></script>
-    <script type="text/javascript" src="js/plugins/icheck/icheck.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/dropzone/dropzone.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/icheck/icheck.min.js"></script>
     <!-- END THIS PAGE PLUGINS-->
 
     <!-- START TEMPLATE -->
     <!-- <script type="text/javascript" src="js/settings.js"></script> -->
 
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/actions.js"></script>
+    <script type="text/javascript" src="../js/plugins.js"></script>
+    <script type="text/javascript" src="../js/actions.js"></script>
     <!-- END TEMPLATE -->
     <script>            
         document.getElementById('links').onclick = function (event) {

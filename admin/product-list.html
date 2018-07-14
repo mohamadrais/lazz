@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <!-- END META SECTION -->
 
     <!-- CSS INCLUDE -->
-    <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css" />
+    <link rel="stylesheet" type="text/css" id="theme" href="../css/theme-default.css" />     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- DATATABLE -->
-    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css" />
     <!-- EOF CSS INCLUDE -->
 </head>
 
@@ -23,7 +23,7 @@
     <div class="page-container">
 
         <!-- START PAGE SIDEBAR -->
-        <div class="page-sidebar">
+        <div class="page-sidebar page-sidebar-fixed scroll mCustomScrollbar _mCS_1 mCS-autoHide">
             <!-- START X-NAVIGATION -->
             <ul class="x-navigation">
                 <li class="xn-logo">
@@ -32,11 +32,11 @@
                 </li>
                 <li class="xn-profile">
                     <a href="#" class="profile-mini">
-                        <img src="assets/images/users/no-image.jpg" />
+                        <img src="../assets/images/users/no-image.jpg" />
                     </a>
                     <div class="profile">
                         <div class="profile-image">
-                            <img src="assets/images/users/no-image.jpg" />
+                            <img src="../assets/images/users/no-image.jpg" />
                         </div>
                         <div class="profile-data">
                             <div class="profile-data-name">ID Number</div>
@@ -71,12 +71,16 @@
                     <a href="add-product.html">
                         <span class="fa fa-cube"></span> Add Product</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="product-list.html">
                         <span class="fa fa-file-text-o"></span> Product List</a>
                 </li>
+                <li>
+                    <a href="product-config.html">
+                        <span class="fa fa-cogs"></span> Product Configuration</a>
+                </li>
                 <li class="xn-title">Sales</li>
-                <li class="active">
+                <li>
                     <a href="sales-orders.html">
                         <span class="fa fa-file-text-o"></span> Orders</a>
                 </li>
@@ -98,11 +102,11 @@
                 <li class="xn-title">Invoices</li>
                 <li>
                     <a href="create-invoice.html">
-                        <span class="fa fa-text-width"></span> Create Invoice</a>
+                        <span class="fa fa-file-text"></span> Create Invoice</a>
                 </li>
                 <li>
                     <a href="all-invoices.html">
-                        <span class="fa fa-file-text-o"></span> All Invoices</a>
+                        <span class="fa fa-files-o"></span> All Invoices</a>
                 </li>
 
                 <li class="xn-title">Users</li>
@@ -113,6 +117,18 @@
                 <li>
                     <a href="user-agents.html">
                         <span class="fa fa-user"></span> Agents & Stockist</a>
+                </li>
+                <li>
+                    <a href="user-group.html">
+                        <span class="fa fa-user-plus"></span> Grouping Users</a>
+                </li>
+                <li>
+                    <a href="user-price.html">
+                        <span class="fa fa-user"></span> User Price Setting</a>
+                </li>
+                <li>
+                    <a href="user-add-price.html">
+                        <span class="fa fa-usd"></span> New Price Setting</a>
                 </li>
                 <li>
                     <a href="user-customers.html">
@@ -146,7 +162,7 @@
                 <!-- SIGN OUT -->
                 <li class="xn-icon-button pull-right">
                     <a href="#" class="mb-control" data-box="#mb-signout">
-                        <span class="fa fa-sign-out" text-center></span>
+                        <span class="fa fa-sign-out"></span>
                     </a>
                 </li>
                 <!-- END SIGN OUT -->
@@ -161,14 +177,14 @@
                 <li>
                     <a href="#">Forms Stuff</a>
                 </li>
-                <li class="active">Orders</li>
+                <li class="active">Product Lists</li>
             </ul>
             <!-- END BREADCRUMB -->
 
             <!-- PAGE TITLE -->
             <div class="page-title">
                 <h2>
-                    <span class="fa fa-arrow-circle-o-left"></span>Orders</h2>
+                    <span class="fa fa-arrow-circle-o-left"></span>Product List</h2>
             </div>
             <!-- END PAGE TITLE -->
 
@@ -181,143 +197,133 @@
                         <div class="panel panel-default">
 
                             <div class="panel-heading">
-                                <h3 class="panel-title">Orders</h3>
+                                <h3 class="panel-title">Posts</h3>
                             </div>
 
                             <div class="panel-body panel-body-table">
 
                                 <div class="table-responsive">
-                                    
                                     <table class="table table-bordered table-striped table-actions">
                                         <thead>
                                             <tr>
-                                                <th width="150">Sequence Number</th>
+                                                <th width="50">ID</th>
                                                 <th>Product Name</th>
-                                                <th width="150">Username</th>
-                                                <th width="100">Order Date</th>
-                                                <th width="200">Shipping Address</th>
-                                                <th width="100">Mobile Number</th>
-                                                <th width="100">Stage</th>
+                                                <th width="100">SKU Number</th>
+                                                <th width="100">In Stock</th>
+                                                <th width="150">Pending Order</th>
+                                                <th width="100">Details</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr id="trow_1">
                                                 <td class="text-center">1</td>
                                                 <td>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x3)</span>
-                                                        </strong>
-                                                    </a>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x4)</span>
-                                                        </strong>
-                                                    </a>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x1)</span>
-                                                        </strong>
+                                                    <a href="product-detail.html">
+                                                        <img class="data-img" src="../images/banner-03.jpg">
+                                                        <strong>Lazz Susu Kambing Asli</strong>
                                                     </a>
                                                 </td>
                                                 <td class="text-center">
-                                                    Mohamad Salah
+                                                    <span class="text-center">AJ12341</span>
+                                                </td>
+                                                <td class="text-center text-info">
+                                                    <strong>500</strong>
+                                                </td>
+                                                <td class="text-center text-danger">
+                                                    <strong>50</strong>
                                                 </td>
                                                 <td class="text-center">
-                                                    24/09/2014
-                                                </td>
-                                                <td>
-                                                    Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang
-                                                </td>
-                                                <td>
-                                                    014-519 1194
-                                                </td>
-                                                <td>
-                                                    <span class="label label-success">New</span>
+                                                    <button class="btn btn-default btn-rounded btn-sm">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-primary btn-rounded btn-sm">
+                                                        <span class="fa fa-file-text text-warning"></span>
+                                                    </button>
                                                 </td>
                                             </tr>
 
                                             <tr id="trow_2">
                                                 <td class="text-center">1</td>
                                                 <td>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x4)</span>
-                                                        </strong>
-                                                    </a>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x4)</span>
-                                                        </strong>
+                                                    <a href="product-detail.html">
+                                                        <img class="data-img" src="../images/banner-03.jpg">
+                                                        <strong>Lazz Susu Kambing Coklat</strong>
                                                     </a>
                                                 </td>
                                                 <td class="text-center">
-                                                    Mohamad Salah
+                                                    <span class="text-center">AJ12341</span>
+                                                </td>
+                                                <td class="text-info text-center">
+                                                    <strong>500</strong>
+                                                </td>
+                                                <td class="text-danger text-center">
+                                                    <strong>50</strong>
                                                 </td>
                                                 <td class="text-center">
-                                                    24/09/2014
-                                                </td>
-                                                <td>
-                                                    Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang
-                                                </td>
-                                                <td>
-                                                    014-519 1194
-                                                </td>
-                                                <td>
-                                                    <span class="label label-danger">Pending</span>
+                                                    <button class="btn btn-default btn-rounded btn-sm">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-primary btn-rounded btn-sm">
+                                                        <span class="fa fa-file-text text-warning"></span>
+                                                    </button>
                                                 </td>
                                             </tr>
 
                                             <tr id="trow_3">
                                                 <td class="text-center">1</td>
                                                 <td>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x4)</span>
-                                                        </strong>
-                                                    </a>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x4)</span>
-                                                        </strong>
-                                                    </a>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x4)</span>
-                                                        </strong>
-                                                    </a>
-                                                    <a href="sales-orders.html">
-                                                        <img class="data-img" src="images/banner-03.jpg">
-                                                        <strong>Lazz Susu Kambing Asli
-                                                            <span>(x4)</span>
-                                                        </strong>
+                                                    <a href="product-detail.html">
+                                                        <img class="data-img" src="../images/banner-03.jpg">
+                                                        <strong>Lazz Susu Kambing Kurma</strong>
                                                     </a>
                                                 </td>
                                                 <td class="text-center">
-                                                    Mohamad Salah
+                                                    <span class="text-center">AJ12341</span>
+                                                </td>
+                                                <td class="text-info text-center">
+                                                    <strong>500</strong>
                                                 </td>
                                                 <td class="text-center">
-                                                    24/09/2014
+                                                    <div class="text-danger">
+                                                        <strong>50</strong>
+                                                    </div>
                                                 </td>
-                                                <td>
-                                                    Lot 44, Kampung Tanjung Batu, 28000 Temerloh Pahang
-                                                </td>
-                                                <td>
-                                                    014-519 1194
-                                                </td>
-                                                <td>
-                                                    <span class="label label-info">Processing</span>
+                                                <td class="text-center">
+                                                    <button class="btn btn-default btn-rounded btn-sm">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-primary btn-rounded btn-sm">
+                                                        <span href="sales-orders.html" class="fa fa-file-text text-warning"></span>
+                                                    </button>
                                                 </td>
                                             </tr>
 
+                                            <tr id="trow_4">
+                                                <td class="text-center">1</td>
+                                                <td>
+                                                    <a href="product-detail.html">
+                                                        <img class="data-img" src="../images/banner-03.jpg">
+                                                        <strong>Lazzcafe</strong>
+                                                    </a>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="text-center">AJ12341</span>
+                                                </td>
+                                                <td class="text-info text-center">
+                                                    <strong>500</strong>
+                                                </td>
+                                                <td class="text-danger text-center">
+                                                    <strong>50</strong>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-default btn-rounded btn-sm">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-primary btn-rounded btn-sm">
+                                                        <span class="fa fa-file-text text-warning"></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -360,61 +366,61 @@
     <!-- END MESSAGE BOX-->
 
     <!-- START PRELOADS -->
-    <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
-    <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+    <audio id="audio-alert" src="../audio/alert.mp3" preload="auto"></audio>
+    <audio id="audio-fail" src="../audio/fail.mp3" preload="auto"></audio>
     <!-- END PRELOADS -->
 
     <!-- START SCRIPTS -->
     <!-- START PLUGINS -->
-    <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap.min.js"></script>
     <!-- END PLUGINS -->
 
     <!-- THIS PAGE PLUGINS -->
-    <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type="text/javascript" src="js/plugins/codemirror/codemirror.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/xml/xml.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/javascript/javascript.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/css/css.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/clike/clike.js"></script>
-    <script type='text/javascript' src="js/plugins/codemirror/mode/php/php.js"></script>
+    <script type="text/javascript" src="../js/plugins/codemirror/codemirror.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/xml/xml.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/javascript/javascript.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/css/css.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/clike/clike.js"></script>
+    <script type='text/javascript' src="../js/plugins/codemirror/mode/php/php.js"></script>
 
-    <script type="text/javascript" src="js/plugins/summernote/summernote.js"></script>
+    <script type="text/javascript" src="../js/plugins/summernote/summernote.js"></script>
 
-    <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type='text/javascript' src='js/plugins/noty/jquery.noty.js'></script>
-    <script type='text/javascript' src='js/plugins/noty/layouts/topCenter.js'></script>
-    <script type='text/javascript' src='js/plugins/noty/layouts/topLeft.js'></script>
-    <script type='text/javascript' src='js/plugins/noty/layouts/topRight.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/jquery.noty.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/layouts/topCenter.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/layouts/topLeft.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/layouts/topRight.js'></script>
 
-    <script type='text/javascript' src='js/plugins/noty/themes/default.js'></script>
+    <script type='text/javascript' src='../js/plugins/noty/themes/default.js'></script>
     <!-- END PAGE PLUGINS -->
 
 
     <!-- START THIS PAGE PLUGINS-->
-    <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type="text/javascript" src="js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
-    <script type="text/javascript" src="js/plugins/dropzone/dropzone.min.js"></script>
-    <script type="text/javascript" src="js/plugins/icheck/icheck.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/dropzone/dropzone.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/icheck/icheck.min.js"></script>
     <!-- END THIS PAGE PLUGINS-->
 
     <!-- START TEMPLATE -->
     <!-- <script type="text/javascript" src="js/settings.js"></script> -->
 
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/actions.js"></script>
+    <script type="text/javascript" src="../js/plugins.js"></script>
+    <script type="text/javascript" src="../js/actions.js"></script>
     <!-- END TEMPLATE -->
 
     <!-- DATATABLE -->
-    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="../DataTables/datatables.min.js"></script>
     <script>
         $(document).ready(function () {
             var table = $('#example').DataTable({

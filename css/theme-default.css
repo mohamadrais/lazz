@@ -3,7 +3,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,500,600,700&subset=latin,latin-ext);
 @import "jquery/jquery-ui.min.css";
 @import "bootstrap/bootstrap.min.css";
-@import "fontawesome/font-awesome.min.css";
 @import "summernote/summernote.css";
 @import "codemirror/codemirror.css";
 @import "nvd3/nv.d3.css";
@@ -1616,7 +1615,7 @@ a.list-group-item:focus {
 .panel-info .panel-heading,
 .panel-warning .panel-heading,
 .panel-danger .panel-heading {
-  background: #F5F5F5;
+  background: #e8e8e8;
   border-color: #E5E5E5;
 }
 .panel-fullscreen-wrap {
