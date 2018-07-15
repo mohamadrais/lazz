@@ -12,7 +12,8 @@
     <!-- END META SECTION -->
 
     <!-- CSS INCLUDE -->
-    <link rel="stylesheet" type="text/css" id="theme" href="../css/theme-default.css" />     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" id="theme" href="../css/theme-default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" id="theme" href="../css/util.css" />
     <!-- EOF CSS INCLUDE -->
 </head>
@@ -67,45 +68,32 @@
                 </li>
                 <li class="xn-title">Product</li>
                 <li>
-                    <a href="add-product.html">
-                        <span class="fa fa-cube"></span> Add Product</a>
-                </li>
-                <li>
-                    <a href="product-list.html">
-                        <span class="fa fa-file-text-o"></span> Product List</a>
+                    <a href="products.html">
+                        <span class="fa fa-cube"></span> Products</a>
                 </li>
                 <li>
                     <a href="product-config.html">
                         <span class="fa fa-cogs"></span> Product Configuration</a>
+                </li>
+                <li>
+                    <a href="user-price.html">
+                        <span class="fa fa-money"></span> User Price Setting</a>
                 </li>
                 <li class="xn-title">Sales</li>
                 <li>
                     <a href="sales-orders.html">
                         <span class="fa fa-file-text-o"></span> Orders</a>
                 </li>
-                <!-- <li>
-                    <a href="sales-returns.html">
-                        <span class="fa fa-undo"></span> Returns</a>
-                </li> -->
-
                 <li class="xn-title">Blog</li>
                 <li>
-                    <a href="new-post.html">
-                        <span class="fa fa-text-width"></span> New Post</a>
-                </li>
-                <li>
-                    <a href="all-posts.html">
-                        <span class="fa fa-file-text-o"></span> All Posts</a>
+                    <a href="blog-posts.html">
+                        <span class="fa fa-file-text-o"></span> Blog Posts</a>
                 </li>
 
                 <li class="xn-title">Invoices</li>
                 <li>
-                    <a href="create-invoice.html">
-                        <span class="fa fa-file-text"></span> Create Invoice</a>
-                </li>
-                <li>
-                    <a href="all-invoices.html">
-                        <span class="fa fa-files-o"></span> All Invoices</a>
+                    <a href="invoices.html">
+                        <span class="fa fa-files-o"></span> Invoices</a>
                 </li>
 
                 <li class="xn-title">Users</li>
@@ -114,20 +102,8 @@
                         <span class="fa fa-plus-circle"></span> Create User</a>
                 </li>
                 <li>
-                    <a href="user-agents.html">
-                        <span class="fa fa-user"></span> Agents & Stockist</a>
-                </li>
-                <li>
                     <a href="user-group.html">
                         <span class="fa fa-user-plus"></span> Grouping Users</a>
-                </li>
-                <li>
-                    <a href="user-price.html">
-                        <span class="fa fa-user"></span> User Price Setting</a>
-                </li>
-                <li>
-                    <a href="user-add-price.html">
-                        <span class="fa fa-usd"></span> New Price Setting</a>
                 </li>
                 <li>
                     <a href="user-customers.html">
@@ -198,14 +174,6 @@
                             <div class="panel-body m-b-20">
 
                                 <div class="form-group">
-                                    <label class="col-12 control-label">User Type</label>
-                                    <div class="col-12">
-                                        <input type="radio" name="user" value="agent">&emsp;Agent&emsp;&emsp;
-                                        <input type="radio" name="user" value="stockist">&emsp;Stockist&emsp;&emsp;
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
                                     <label class="col-12 control-label">User Fullame</label>
                                     <div class="col-12">
                                         <input type="text" class="form-control" placeholder="Enter the user fullname...">
@@ -236,7 +204,7 @@
                                             <input type="number" class="form-control" placeholder="Posscode">
                                         </div>
                                         <div class="col-12 col-xs-12 col-sm-6 no-padding ml-1">
-                                            <select class="form-control select">
+                                            <select class="form-control select" data-live-search="true">
                                                 <option>-- State --</option>
                                                 <option>Pahang</option>
                                                 <option>Selangor</option>
@@ -269,40 +237,133 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label class="col-12 control-label">Group User</label>
+                                    <select multiple class="form-control select" data-live-search="true">
+                                        <option>Group 1</option>
+                                        <option>Group 2</option>
+                                        <option>Group 3</option>
+                                        <option>Group 4</option>
+                                        <option>Group 5</option>
+                                    </select>
+                                </div>
+
+                                <div class="panel-footer bo-0">
+                                    <button class="btn btn-default">Clear Form</button>
+                                    <button class="btn btn-primary pull-right">Confirm</button>
+                                </div>
+
                             </div>
 
-                            <div class="panel-footer">
-                                <button class="btn btn-default">Clear Form</button>
-                                <button class="btn btn-primary pull-right">Create User</button>
+                            <h4>Agents & Stockist List</h4>
+
+                            <div class="panel panel-default">
+
+                                <div class="panel-body">
+                                    <table class="table datatable table-bordered table-striped table-actions">
+                                        <thead>
+                                            <tr>
+                                                <th width="50">Agent ID</th>
+                                                <th>Name</th>
+                                                <th>Group</th>
+                                                <th width="100">Email</th>
+                                                <th width="100">Phone Number</th>
+                                                <th width="100">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="trow_1">
+                                                <td class="text-center">LC827193</td>
+                                                <td>
+                                                    <strong>Mohamad Rais</strong>
+                                                </td>
+                                                <td>Group 1</td>
+                                                <td>rais.sahri@gmail.com</td>
+                                                <td>011-231 3321</td>
+                                                <td>
+                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip" title="Deactive">
+                                                        <span class="fa fa-ban"></span>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                        <span class="fa fa-times"></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr id="trow_2">
+                                                <td class="text-center">LC123123</td>
+                                                <td>
+                                                    <strong>Khaja Nazimuddin</strong>
+                                                </td>
+                                                <td>Group 1</td>
+                                                <td>knazimuddin@gmail.com</td>
+                                                <td>012-323 1213</td>
+                                                <td>
+                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip" title="Deactive">
+                                                        <span class="fa fa-ban"></span>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                        <span class="fa fa-times"></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr id="trow_3">
+                                                <td class="text-center">LC123041</td>
+                                                <td>
+                                                    <strong>Mat Sabu</strong>
+                                                </td>
+                                                <td>Group 1</td>
+                                                <td>mat.sabu@gmail.com</td>
+                                                <td>013-132 3341</td>
+                                                <td>
+                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                        <span class="fa fa-pencil"></span>
+                                                    </button>
+                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip" title="Deactive">
+                                                        <span class="fa fa-ban"></span>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                        <span class="fa fa-times"></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- success -->
+                    <div class="message-box message-box-success animated fadeIn" id="message-box-success">
+                        <div class="mb-container">
+                            <div class="mb-middle">
+                                <div class="mb-title">
+                                    <span class="fa fa-check"></span> Success</div>
+                                <div class="mb-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tellus sed mauris mollis
+                                        pellentesque nec a ligula. Quisque ultricies eleifend lacinia. Nunc luctus quam pretium
+                                        massa semper tincidunt. Praesent vel mollis eros. Fusce erat arcu, feugiat ac dignissim
+                                        ac, aliquam sed urna. Maecenas scelerisque molestie justo, ut tempor nunc.</p>
+                                </div>
+                                <div class="mb-footer">
+                                    <button class="btn btn-default btn-lg pull-right mb-control-close">Close</button>
+                                </div>
                             </div>
                         </div>
-                        </form>
-
                     </div>
-                </div>
+                    <!-- end success -->
 
-                <!-- success -->
-                <div class="message-box message-box-success animated fadeIn" id="message-box-success">
-                    <div class="mb-container">
-                        <div class="mb-middle">
-                            <div class="mb-title">
-                                <span class="fa fa-check"></span> Success</div>
-                            <div class="mb-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tellus sed mauris mollis
-                                    pellentesque nec a ligula. Quisque ultricies eleifend lacinia. Nunc luctus quam pretium
-                                    massa semper tincidunt. Praesent vel mollis eros. Fusce erat arcu, feugiat ac dignissim
-                                    ac, aliquam sed urna. Maecenas scelerisque molestie justo, ut tempor nunc.</p>
-                            </div>
-                            <div class="mb-footer">
-                                <button class="btn btn-default btn-lg pull-right mb-control-close">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end success -->
-
-                <!-- fail message -->
-                <!--div class="message-box message-box-danger animated fadeIn" id="message-box-fail">
+                    <!-- fail message -->
+                    <!--div class="message-box message-box-danger animated fadeIn" id="message-box-fail">
                         <div class="mb-container">
                             <div class="mb-middle">
                                 <div class="mb-title"><span class="fa fa-times"></span> Fail</div>
@@ -315,128 +376,129 @@
                             </div>
                         </div>
                     </div-->
-                <!-- end fail message -->
+                    <!-- end fail message -->
+
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->
 
             </div>
-            <!-- END PAGE CONTENT WRAPPER -->
-
+            <!-- END PAGE CONTENT -->
         </div>
-        <!-- END PAGE CONTENT -->
-    </div>
-    <!-- END PAGE CONTAINER -->
+        <!-- END PAGE CONTAINER -->
 
-    <!-- MESSAGE BOX-->
-    <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
-        <div class="mb-container">
-            <div class="mb-middle">
-                <div class="mb-title">
-                    <span class="fa fa-sign-out"></span> Log
-                    <strong>Out</strong> ?</div>
-                <div class="mb-content">
-                    <p>Are you sure you want to log out?</p>
-                    <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
-                </div>
-                <div class="mb-footer">
-                    <div class="pull-right">
-                        <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
-                        <button class="btn btn-default btn-lg mb-control-close">No</button>
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title">
+                        <span class="fa fa-sign-out"></span> Log
+                        <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- END MESSAGE BOX-->
+        <!-- END MESSAGE BOX-->
 
-    <!-- START PRELOADS -->
-    <audio id="audio-alert" src="../audio/alert.mp3" preload="auto"></audio>
-    <audio id="audio-fail" src="../audio/fail.mp3" preload="auto"></audio>
-    <!-- END PRELOADS -->
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="../audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="../audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->
 
-    <!-- START SCRIPTS -->
-    <!-- START PLUGINS -->
-    <script type="text/javascript" src="../js/plugins/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/plugins/jquery/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap.min.js"></script>
-    <!-- END PLUGINS -->
+        <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="../js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap.min.js"></script>
+        <!-- END PLUGINS -->
 
-    <!-- THIS PAGE PLUGINS -->
-    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <!-- THIS PAGE PLUGINS -->
+        <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type="text/javascript" src="../js/plugins/codemirror/codemirror.js"></script>
-    <script type='text/javascript' src="../js/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-    <script type='text/javascript' src="../js/plugins/codemirror/mode/xml/xml.js"></script>
-    <script type='text/javascript' src="../js/plugins/codemirror/mode/javascript/javascript.js"></script>
-    <script type='text/javascript' src="../js/plugins/codemirror/mode/css/css.js"></script>
-    <script type='text/javascript' src="../js/plugins/codemirror/mode/clike/clike.js"></script>
-    <script type='text/javascript' src="../js/plugins/codemirror/mode/php/php.js"></script>
+        <script type="text/javascript" src="../js/plugins/codemirror/codemirror.js"></script>
+        <script type='text/javascript' src="../js/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script type='text/javascript' src="../js/plugins/codemirror/mode/xml/xml.js"></script>
+        <script type='text/javascript' src="../js/plugins/codemirror/mode/javascript/javascript.js"></script>
+        <script type='text/javascript' src="../js/plugins/codemirror/mode/css/css.js"></script>
+        <script type='text/javascript' src="../js/plugins/codemirror/mode/clike/clike.js"></script>
+        <script type='text/javascript' src="../js/plugins/codemirror/mode/php/php.js"></script>
 
-    <script type="text/javascript" src="../js/plugins/summernote/summernote.js"></script>
+        <script type="text/javascript" src="../js/plugins/summernote/summernote.js"></script>
 
-    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
-    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
-    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-file-input.js"></script>
-    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-select.js"></script>
-    <script type="text/javascript" src="../js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
+        <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-file-input.js"></script>
+        <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="../js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
 
-    <script type='text/javascript' src='../js/plugins/noty/jquery.noty.js'></script>
-    <script type='text/javascript' src='../js/plugins/noty/layouts/topCenter.js'></script>
-    <script type='text/javascript' src='../js/plugins/noty/layouts/topLeft.js'></script>
-    <script type='text/javascript' src='../js/plugins/noty/layouts/topRight.js'></script>
+        <script type='text/javascript' src='../js/plugins/noty/jquery.noty.js'></script>
+        <script type='text/javascript' src='../js/plugins/noty/layouts/topCenter.js'></script>
+        <script type='text/javascript' src='../js/plugins/noty/layouts/topLeft.js'></script>
+        <script type='text/javascript' src='../js/plugins/noty/layouts/topRight.js'></script>
+        <script type="text/javascript" src="../js/plugins/datatables/jquery.dataTables.min.js"></script>
 
-    <script type='text/javascript' src='../js/plugins/noty/themes/default.js'></script>
-    <!-- END PAGE PLUGINS -->
+        <script type='text/javascript' src='../js/plugins/noty/themes/default.js'></script>
+        <!-- END PAGE PLUGINS -->
 
 
-    <!-- START THIS PAGE PLUGINS-->
-    <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
-    <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <!-- START THIS PAGE PLUGINS-->
+        <script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 
-    <script type="text/javascript" src="../js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
-    <script type="text/javascript" src="../js/plugins/dropzone/dropzone.min.js"></script>
-    <script type="text/javascript" src="../js/plugins/icheck/icheck.min.js"></script>
-    <!-- END THIS PAGE PLUGINS-->
+        <script type="text/javascript" src="../js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/dropzone/dropzone.min.js"></script>
+        <script type="text/javascript" src="../js/plugins/icheck/icheck.min.js"></script>
+        <!-- END THIS PAGE PLUGINS-->
 
-    <!-- START TEMPLATE -->
-    <!-- <script type="text/javascript" src="js/settings.js"></script> -->
+        <!-- START TEMPLATE -->
+        <!-- <script type="text/javascript" src="js/settings.js"></script> -->
 
-    <script type="text/javascript" src="../js/plugins.js"></script>
-    <script type="text/javascript" src="../js/actions.js"></script>
-    <!-- END TEMPLATE -->
-    <script>            
-        document.getElementById('links').onclick = function (event) {
-            event = event || window.event;
-            var target = event.target || event.srcElement;
-            var link = target.src ? target.parentNode : target;
-            var options = {
-                index: link, event: event, onclosed: function () {
-                    setTimeout(function () {
-                        $("body").css("overflow", "");
-                    }, 200);
-                }
+        <script type="text/javascript" src="../js/plugins.js"></script>
+        <script type="text/javascript" src="../js/actions.js"></script>
+        <!-- END TEMPLATE -->
+        <script>            
+            document.getElementById('links').onclick = function (event) {
+                event = event || window.event;
+                var target = event.target || event.srcElement;
+                var link = target.src ? target.parentNode : target;
+                var options = {
+                    index: link, event: event, onclosed: function () {
+                        setTimeout(function () {
+                            $("body").css("overflow", "");
+                        }, 200);
+                    }
+                };
+                var links = this.getElementsByTagName('a');
+                blueimp.Gallery(links, options);
             };
-            var links = this.getElementsByTagName('a');
-            blueimp.Gallery(links, options);
-        };
-    </script>
+        </script>
 
-    <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("codeEditor"), {
-            lineNumbers: true,
-            matchBrackets: true,
-            mode: "application/x-httpd-php",
-            indentUnit: 4,
-            indentWithTabs: true,
-            enterMode: "keep",
-            tabMode: "shift"
-        });
-        editor.setSize('100%', '420px');
-    </script>
-    <!-- END SCRIPTS -->
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("codeEditor"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                mode: "application/x-httpd-php",
+                indentUnit: 4,
+                indentWithTabs: true,
+                enterMode: "keep",
+                tabMode: "shift"
+            });
+            editor.setSize('100%', '420px');
+        </script>
+        <!-- END SCRIPTS -->
 </body>
 
 </html>

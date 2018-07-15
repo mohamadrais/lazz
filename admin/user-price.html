@@ -69,45 +69,32 @@
 
                 <li class="xn-title">Product</li>
                 <li>
-                    <a href="add-product.html">
-                        <span class="fa fa-cube"></span> Add Product</a>
-                </li>
-                <li>
-                    <a href="product-list.html">
-                        <span class="fa fa-file-text-o"></span> Product List</a>
+                    <a href="products.html">
+                        <span class="fa fa-cube"></span> Products</a>
                 </li>
                 <li>
                     <a href="product-config.html">
                         <span class="fa fa-cogs"></span> Product Configuration</a>
                 </li>
+                <li class="active">
+                    <a href="user-price.html">
+                        <span class="fa fa-money"></span> User Price Setting</a>
+                </li>
                 <li class="xn-title">Sales</li>
                 <li>
                     <a href="sales-orders.html">
-                        <span class="fa fa-shopping-bag"></span> Orders</a>
+                        <span class="fa fa-file-text-o"></span> Orders</a>
                 </li>
-                <!-- <li>
-                    <a href="sales-returns.html">
-                        <span class="fa fa-undo"></span> Returns</a>
-                </li> -->
-
                 <li class="xn-title">Blog</li>
                 <li>
-                    <a href="new-post.html">
-                        <span class="fa fa-text-width"></span> New Post</a>
-                </li>
-                <li>
-                    <a href="all-posts.html">
-                        <span class="fa fa-file-text-o"></span> All Posts</a>
+                    <a href="blog-posts.html">
+                        <span class="fa fa-file-text-o"></span> Blog Posts</a>
                 </li>
 
                 <li class="xn-title">Invoices</li>
                 <li>
-                    <a href="create-invoice.html">
-                        <span class="fa fa-file-text"></span> Create Invoice</a>
-                </li>
-                <li>
-                    <a href="all-invoices.html">
-                        <span class="fa fa-files-o"></span> All Invoices</a>
+                    <a href="invoices.html">
+                        <span class="fa fa-files-o"></span> Invoices</a>
                 </li>
 
                 <li class="xn-title">Users</li>
@@ -116,20 +103,8 @@
                         <span class="fa fa-plus-circle"></span> Create User</a>
                 </li>
                 <li>
-                    <a href="user-agents.html">
-                        <span class="fa fa-user"></span> Agents & Stockist</a>
-                </li>
-                <li>
                     <a href="user-group.html">
                         <span class="fa fa-user-plus"></span> Grouping Users</a>
-                </li>
-                <li class="active">
-                    <a href="user-price.html">
-                        <span class="fa fa-money"></span> User Price Setting</a>
-                </li>
-                <li>
-                    <a href="user-add-price.html">
-                        <span class="fa fa-usd"></span> New Price Setting</a>
                 </li>
                 <li>
                     <a href="user-customers.html">
@@ -187,849 +162,201 @@
 
                 <div class="row">
                     <div class="col-md-12">
+                        <h4>Users Price</h4>
+                        <div class="form-group">
+                            <div class="col-12">
+                                <select class="form-control select" data-live-search="true">
+                                    <option>-- Select Group --</option>
+                                    <option>Group 1</option>
+                                    <option>Group 2</option>
+                                    <option>Group 3</option>
+                                    <option>Group 4</option>
+                                </select>
+                            </div>
+                        </div>
 
                         <form class="form-horizontal">
 
-                            <div class="panel panel-default tabs">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="active">
-                                        <a href="#tab-first" role="tab" data-toggle="tab">Marketing Officer</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab-second" role="tab" data-toggle="tab">Stockist Outlet</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab-third" role="tab" data-toggle="tab">Stockist Manager</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab-forth" role="tab" data-toggle="tab">Lazz Consultant</a>
-                                    </li>
-                                </ul>
-                                <div class="panel-body tab-content">
-                                    <div class="tab-pane active" id="tab-first">
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazz Kurma/Asli/Choco</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="150">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>15</strong>
-                                                                    </td>
-                                                                    <td>RM 28</td>
-                                                                    <td>RM 28</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_2">
-                                                                    <td class="text-center">
-                                                                        <strong>8</strong>
-                                                                    </td>
-                                                                    <td>RM 29</td>
-                                                                    <td>RM 29</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_3">
-                                                                    <td class="text-center">
-                                                                        <strong>6</strong>
-                                                                    </td>
-                                                                    <td>RM 31</td>
-                                                                    <td>RM 31</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_4">
-                                                                    <td class="text-center">
-                                                                        <strong>3</strong>
-                                                                    </td>
-                                                                    <td>RM 33</td>
-                                                                    <td>RM 33</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_5">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 35</td>
-                                                                    <td>RM 35</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
+                            <div class="panel panel-default">
 
+                                <div class="panel-body">
+                                    <div class="block">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">Lazz Kurma/Asli/Choco</h3>
                                             </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe Without Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
+                                            <div class="panel-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-striped table-actions">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="50">Cartons</th>
+                                                                <th width="">Price Per Item (West)</th>
+                                                                <th width="">Price Per Item (East)</th>
+                                                                <th width="150">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr id="trow_1">
+                                                                <td class="text-center">
+                                                                    <strong>15</strong>
+                                                                </td>
+                                                                <td>RM 28</td>
+                                                                <td>RM 28</td>
+                                                                <td>
+                                                                    <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                                        <span class="fa fa-pencil"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                                        <span class="fa fa-times"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr id="trow_2">
+                                                                <td class="text-center">
+                                                                    <strong>8</strong>
+                                                                </td>
+                                                                <td>RM 29</td>
+                                                                <td>RM 29</td>
+                                                                <td>
+                                                                    <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                                        <span class="fa fa-pencil"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                                        <span class="fa fa-times"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr id="trow_3">
+                                                                <td class="text-center">
+                                                                    <strong>6</strong>
+                                                                </td>
+                                                                <td>RM 31</td>
+                                                                <td>RM 31</td>
+                                                                <td>
+                                                                    <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                                        <span class="fa fa-pencil"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                                        <span class="fa fa-times"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr id="trow_4">
+                                                                <td class="text-center">
+                                                                    <strong>3</strong>
+                                                                </td>
+                                                                <td>RM 33</td>
+                                                                <td>RM 33</td>
+                                                                <td>
+                                                                    <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                                        <span class="fa fa-pencil"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                                        <span class="fa fa-times"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr id="trow_5">
+                                                                <td class="text-center">
+                                                                    <strong>1</strong>
+                                                                </td>
+                                                                <td>RM 35</td>
+                                                                <td>RM 35</td>
+                                                                <td>
+                                                                    <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                                        <span class="fa fa-pencil"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                                        <span class="fa fa-times"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-                                                <div class="panel-body">
-
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>3</strong>
-                                                                    </td>
-                                                                    <td>RM 23.50</td>
-                                                                    <td>RM 28.50</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
                                             </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe With Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 23.50</td>
-                                                                    <td>RM 28.50</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                            </div>
                                         </div>
                                     </div>
-
-                                    <div class="tab-pane" id="tab-second">
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazz Kurma/Asli/Choco</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="150">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>8</strong>
-                                                                    </td>
-                                                                    <td>RM 29</td>
-                                                                    <td>RM 29</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_2">
-                                                                    <td class="text-center">
-                                                                        <strong>6</strong>
-                                                                    </td>
-                                                                    <td>RM 31</td>
-                                                                    <td>RM 31</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_3">
-                                                                    <td class="text-center">
-                                                                        <strong>3</strong>
-                                                                    </td>
-                                                                    <td>RM 33</td>
-                                                                    <td>RM 33</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_4">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 35</td>
-                                                                    <td>RM 35</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
+                                    <div class="block">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">Lazzcafe Without Milk</h3>
                                             </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe Without Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
+                                            <div class="panel-body">
 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>3</strong>
-                                                                    </td>
-                                                                    <td>RM 24</td>
-                                                                    <td>RM 29</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-striped table-actions">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="50">Cartons</th>
+                                                                <th width="">Price Per Item (West)</th>
+                                                                <th width="">Price Per Item (East)</th>
+                                                                <th width="">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr id="trow_1">
+                                                                <td class="text-center">
+                                                                    <strong>3</strong>
+                                                                </td>
+                                                                <td>RM 23.50</td>
+                                                                <td>RM 28.50</td>
+                                                                <td>
+                                                                    <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                                        <span class="fa fa-pencil"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                                        <span class="fa fa-times"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-
                                             </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe With Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 24</td>
-                                                                    <td>RM 29</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                            </div>
                                         </div>
                                     </div>
-
-                                    <div class="tab-pane" id="tab-third">
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazz Kurma/Asli/Choco</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="150">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_2">
-                                                                    <td class="text-center">
-                                                                        <strong>6</strong>
-                                                                    </td>
-                                                                    <td>RM 31</td>
-                                                                    <td>RM 31</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_3">
-                                                                    <td class="text-center">
-                                                                        <strong>3</strong>
-                                                                    </td>
-                                                                    <td>RM 33</td>
-                                                                    <td>RM 33</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_4">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 35</td>
-                                                                    <td>RM 35</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
+                                    <div class="block">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">Lazzcafe With Milk</h3>
                                             </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe Without Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
+                                            <div class="panel-body">
 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>3</strong>
-                                                                    </td>
-                                                                    <td>RM 24</td>
-                                                                    <td>RM 29</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-striped table-actions">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="50">Cartons</th>
+                                                                <th width="">Price Per Item (West)</th>
+                                                                <th width="">Price Per Item (East)</th>
+                                                                <th width="">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr id="trow_1">
+                                                                <td class="text-center">
+                                                                    <strong>1</strong>
+                                                                </td>
+                                                                <td>RM 23.50</td>
+                                                                <td>RM 28.50</td>
+                                                                <td>
+                                                                    <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                                        <span class="fa fa-pencil"></span>
+                                                                    </button>
+                                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                                        <span class="fa fa-times"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-
                                             </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe With Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 31</td>
-                                                                    <td>RM 26</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane" id="tab-forth">
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazz Kurma/Asli/Choco</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="150">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_2">
-                                                                    <td class="text-center">
-                                                                        <strong>6</strong>
-                                                                    </td>
-                                                                    <td>RM 31</td>
-                                                                    <td>RM 31</td>
-                                                                    <td>
-                                                                        <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_3">
-                                                                    <td class="text-center">
-                                                                        <strong>3</strong>
-                                                                    </td>
-                                                                    <td>RM 33</td>
-                                                                    <td>RM 33</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_4">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 35</td>
-                                                                    <td>RM 35</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe Without Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
-
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>1</strong>
-                                                                    </td>
-                                                                    <td>RM 29</td>
-                                                                    <td>RM 34</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_2">
-                                                                    <td class="text-center">
-                                                                        <strong>6 Boxes</strong>
-                                                                    </td>
-                                                                    <td>RM 30</td>
-                                                                    <td>RM 35</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="block">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title">Lazzcafe With Milk</h3>
-                                                    <ul class="panel-controls">
-                                                        <li>
-                                                            <a href="#" class="panel-refresh">
-                                                                <span class="fa fa-refresh"></span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="user-add-price.html" class="panel-add">
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel-body">
-
-                                                    <div class="table-responsive">
-                                                        <table class="table table-bordered table-striped table-actions">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="50">Cartons</th>
-                                                                    <th width="">Price Per Item (West)</th>
-                                                                    <th width="">Price Per Item (East)</th>
-                                                                    <th width="">Actions</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>6 Boxes</strong>
-                                                                    </td>
-                                                                    <td>RM 29</td>
-                                                                    <td>RM 34</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr id="trow_1">
-                                                                    <td class="text-center">
-                                                                        <strong>3 Boxes</strong>
-                                                                    </td>
-                                                                    <td>RM 30</td>
-                                                                    <td>RM 35</td>
-                                                                    <td>
-                                                                        <button href="user-add-price.html" class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
-                                                                            <span class="fa fa-pencil"></span>
-                                                                        </button>
-                                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
-                                                                            <span class="fa fa-times"></span>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1100,6 +427,7 @@
     <script type='text/javascript' src="../js/plugins/codemirror/mode/css/css.js"></script>
     <script type='text/javascript' src="../js/plugins/codemirror/mode/clike/clike.js"></script>
     <script type='text/javascript' src="../js/plugins/codemirror/mode/php/php.js"></script>
+    <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-select.js"></script>
 
     <script type="text/javascript" src="../js/plugins/summernote/summernote.js"></script>
 
@@ -1110,6 +438,7 @@
     <script type='text/javascript' src='../js/plugins/noty/layouts/topCenter.js'></script>
     <script type='text/javascript' src='../js/plugins/noty/layouts/topLeft.js'></script>
     <script type='text/javascript' src='../js/plugins/noty/layouts/topRight.js'></script>
+    <script type="text/javascript" src="../js/plugins/datatables/jquery.dataTables.min.js"></script>
 
     <script type='text/javascript' src='js/plugins/noty/themes/default.js'></script>
     <!-- END PAGE PLUGINS -->

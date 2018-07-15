@@ -3758,6 +3758,9 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
 /*[ Border ]
 ///////////////////////////////////////////////////////////
 */
+.bo0{
+	border: 0 !important;
+}
 .bo1 {
 	border: 1px solid #dbdbdb;
 	border-radius: 2px;
