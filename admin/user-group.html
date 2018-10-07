@@ -54,7 +54,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="../index.html">
                         <span class="fa fa-globe"></span>
                         <span class="xn-text">Go To Site</span>
                     </a>
@@ -83,6 +83,10 @@
                 <li>
                     <a href="sales-orders.html">
                         <span class="fa fa-file-text-o"></span> Orders</a>
+                </li>
+                <li>
+                    <a href="restock.html">
+                        <span class="fa fa-retweet"></span> Restock</a>
                 </li>
                 <li class="xn-title">Blog</li>
                 <li>
@@ -136,7 +140,7 @@
                 <!-- END SEARCH -->
                 <!-- SIGN OUT -->
                 <li class="xn-icon-button pull-right">
-                    <a href="#" class="mb-control" data-box="#mb-signout">
+                    <a href="#" class="logout-prompt">
                         <span class="fa fa-sign-out"></span>
                     </a>
                 </li>
@@ -222,13 +226,16 @@
                                                     <br>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip"
+                                                        title="Edit">
                                                         <span class="fa fa-pencil"></span>
                                                     </button>
-                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip" title="Deactive">
+                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip"
+                                                        title="Deactive">
                                                         <span class="fa fa-ban"></span>
                                                     </button>
-                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');"
+                                                        data-toggle="tooltip" title="Delete">
                                                         <span class="fa fa-times"></span>
                                                     </button>
                                                 </td>
@@ -246,13 +253,16 @@
                                                     <br>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip"
+                                                        title="Edit">
                                                         <span class="fa fa-pencil"></span>
                                                     </button>
-                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip" title="Deactive">
+                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip"
+                                                        title="Deactive">
                                                         <span class="fa fa-ban"></span>
                                                     </button>
-                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');"
+                                                        data-toggle="tooltip" title="Delete">
                                                         <span class="fa fa-times"></span>
                                                     </button>
                                                 </td>
@@ -270,13 +280,16 @@
                                                     <br>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip" title="Edit">
+                                                    <button class="btn btn-default btn-rounded btn-sm" data-toggle="tooltip"
+                                                        title="Edit">
                                                         <span class="fa fa-pencil"></span>
                                                     </button>
-                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip" title="Deactive">
+                                                    <button class="btn btn-warning btn-rounded btn-sm" data-toggle="tooltip"
+                                                        title="Deactive">
                                                         <span class="fa fa-ban"></span>
                                                     </button>
-                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');" data-toggle="tooltip" title="Delete">
+                                                    <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');"
+                                                        data-toggle="tooltip" title="Delete">
                                                         <span class="fa fa-times"></span>
                                                     </button>
                                                 </td>
@@ -378,6 +391,129 @@
                 tabMode: "shift"
             });
             editor.setSize('100%', '420px');
+        </script>
+        <!--===============================================================================================-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.all.js"></script>
+        <script type="text/javascript">
+            $('.block2-btn-addcart').each(function () {
+                var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "is added to cart !", "success");
+                });
+            });
+
+            $('.block2-btn-addwishlist').each(function () {
+                var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "is added to wishlist !", "success");
+                });
+            });
+
+            $('.primary-prompt').each(function () {
+                var nameProduct = $(this).find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "This is primary popover", "info");
+                });
+            });
+
+            $('.info-prompt').each(function () {
+                var nameProduct = $(this).find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "This is primary popover", "info");
+                });
+            });
+
+            $('.primary-prompt').each(function () {
+                var nameProduct = $(this).find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "This is primary popover", "info");
+                });
+            });
+
+            $('.success-prompt').each(function () {
+                var nameProduct = $(this).find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "This is primary popover", "success");
+                });
+            });
+
+            $('.warning-prompt').each(function () {
+                var nameProduct = $(this).find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "This is primary popover", "warning");
+                });
+            });
+
+            $('.danger-prompt').each(function () {
+                var nameProduct = $(this).find('.block2-name').html();
+                $(this).on('click', function () {
+                    swal(nameProduct, "This is primary popover", "error");
+                });
+            });
+
+            $('.delete-prompt').click(function () {
+                swal({
+                    title: 'Are you sure?',
+                    text: "It will permanently deleted !",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: "Cancel",
+                    closeOnConfirm: true,
+                    closeOnCancel: true
+                }).then(function (isConfirm) {
+                    if (isConfirm) {
+                        swal("Deleted!", "Delete successfull!", "success");
+                    } else {
+                        swal("Canceled", "Your imaginary file is safe :)", "error");
+                    }
+                })
+            })
+
+            $('.logout-prompt').click(function () {
+                swal({
+                    title: 'Are you sure?',
+                    text: "You will redirect to the homepage",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, log out',
+                    cancelButtonText: "Stay sign in",
+                    closeOnConfirm: true,
+                    closeOnCancel: true
+                }).then(function (isConfirm) {
+                    if (isConfirm) {
+                        swal("Log out!", "You have successfully log out", "success");
+                    } else {
+                        swal("Stay", "You stay sign in :)", "error");
+                    }
+                })
+            })
+
+            $('.restock-prompt').click(function () {
+                swal({
+                    title: 'Are you sure?',
+                    text: "You will redirect to the homepage",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, proceed order',
+                    cancelButtonText: "Cancel",
+                    closeOnConfirm: true,
+                    closeOnCancel: true
+                }).then(function (isConfirm) {
+                    if (isConfirm) {
+                        swal("Order sent!", "You have successfully place your order", "success");
+                    } else {
+                        swal("Canceled", "You canceled your order", "error");
+                    }
+                })
+            })
+
         </script>
         <!-- END SCRIPTS -->
 </body>

@@ -978,6 +978,11 @@ li.sale-noti > a {
   background: transparent;
 }
 
+.btn-delete{
+  color: #d40511;
+  padding: 0px;
+}
+
 .btn-reg{
   background: #FBD022;
   color: #fff;
@@ -1382,7 +1387,159 @@ li.sale-noti > a {
   }
 }
 
-
+/*[ Addressess ]
+-----------------------------------------------------------
+*/
+.address-card {
+  background: #fff;
+  padding: 3rem .3rem 3rem 0rem;
+  min-height: 10rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #efefef;
+}
+.address-display__left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.address-display__field-container--name {
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+.address-display__field-label {
+  margin-right: 2.5rem;
+  text-transform: uppercase;
+  width: 6rem;
+  color: rgba(85,85,85,.8);
+  font-family: Avenir;
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+.address-display__field-content {
+  max-width: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5;
+}
+.address-display__name-text {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 1rem;
+  max-width: 350px;
+  font-weight: 500;
+  font-family: Avenir-Medium;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5;
+}
+.address-display__field-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.address-card__buttons {
+  width: 22rem;
+  height: 100%;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.address-card__button-group, .address-card__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.address-card__button-group {
+  margin: 8px 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.bacc-secondary-action-btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: capitalize;
+  padding: 7px 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #555;
+  margin-right: 20px;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  outline: none;
+}
+.btn-light {
+  background: #fff;
+  color: #555;
+  border: 1px solid rgba(0,0,0,.09);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.03);
+}
+.btn--s {
+  height: 34px;
+  padding: 0 15px;
+  min-width: 60px;
+  max-width: 190px;
+}
+.btn--inline {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
 
 /*[ Slide1 ]*/
 ///////////////////////////////////////////////////////////
@@ -2225,13 +2382,20 @@ header{float: left; width:100%}
   padding-right: 30px;
 }
 .table-shopping-cart .column-4 {
-  width: 355px;
+  width: 300px;
   padding-right: 30px;
+  text-align: center;
 }
 .table-shopping-cart .column-5 {
   padding-right: 30px;
 }
-
+.table-shopping-cart .column-6 {
+  padding-right: 30px;
+  cursor: pointer;
+}
+.table-shopping-cart .column-6:hover {
+  color: #d40511;
+}
 .table-shopping-cart .table-head th {
   font-family: Montserrat-Bold;
   font-size: 13px;
